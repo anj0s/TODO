@@ -51,7 +51,7 @@ const Tasks = {
     }
   },
 }
-
+ 
 const Theme = {
   theme: document.querySelector('#Theme'),
   toggleButton: document.querySelector('#toggleTheme'),
