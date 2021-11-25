@@ -1,0 +1,7 @@
+# Para iniciar um commit
+- Abro o terminal no diretório
+- git init
+- git status para verificar a situação dos arquivos e ver quais estão no diretório sem estarem salvos
+- git add <files> ou '.' para adicionar todos os arquivos
+- git add <files> ou '.' também serve para subir as modificações
+- git commit -m "descrição do commit"
