@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" id="Theme">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"><link>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  
+    <title>toDo</title>
+</head>
+    <body class="body">
+      <section id="body">
+          
+        <header>
+          <img src="./assets/task_black_24dp.svg" alt="" id="logo">TO DO
+        </header>
+        
+        <main class = "container">
+          <div id="buttonNew">Nova Tarefa <img id="newTask" src="./assets/note_add_black_24dp.svg" alt="Nova Tarefa" onclick="Modal.modal()"></div>
+          <div id="buttonTema">Tema Escuro <img id="toggleTheme" src="./assets/toggle_off_black_24dp.svg" alt="" onclick="Theme.alterTheme()"></div>
+          
+          <section class="tarefas">
+            <card-body class="card" id="cardBody">
+              <li id="list">
+              </li>
+            </card-body>
+          </section>
+
+        </main>
+      </section>
+
+      <div class="modal-overlay">
+        <form action="" onsubmit="Input.submit(event)" id="forms">
+          <header class="formHead">
+            Adicione uma nova tarefa
+          </header>
+          <div class="input-group">
+            <input type="text" name="tarefa" id="tarefa" placeholder="Digite a tarefa">
+              <!-- <input type="date" id="data"> -->
+          </div>
+          <div class="input-group buttons">
+            <a href="#" id="close" onclick="Modal.modal()">Fechar</a>
+            <input type="submit" value="Salvar" id="salvar"/>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="modal-span">
+        <div class="spanContainer">
+          <div class="spanImage">
+            <img src="./assets/error_outline_black_24dp.svg" alt="" class="warning">
+          </div>
+          <div class="spanMessage">
+            <span class="span"></span>
+          </div>
+          <div class="spanClose">
+            <a href="#" onclick="Modal.removeSpan()">OK</a>
+          </div>
+        </div>
+      </div>
+    </body>
+    <script src="./script.js"></script>
+
+    <footer>
+      <li class="bar">
+      <a href="#" class="socialLink" onclick="Alerts.preparing()">Github</a>
+      |
+      <a href="https://www.instagram.com/anj0s.m/" class="socialLink" target="_blanck">Instagram</a>
+      |
+      <a href="https://www.linkedin.com/in/matheus-anjos-36ba38211/" class="socialLink" target="_blanck">Linkedin</a>
+      </li>
+      <div class="about"> Matheus Anjos</div>
+    </footer>
+</html> 

@@ -1,0 +1,391 @@
+:root {
+  --dark-blue: #363f5f;
+  --green: #49aa26;
+  --light-green: #3dd705;
+  --red: #e92929;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#body {
+  background: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+body.body{
+  background-color: whitesmoke;
+}
+
+/* Header */
+header{
+  background-color:#dc4c3f;
+  color: black;
+  padding: 2rem 2rem 1rem 2rem;
+  text-align: center;
+  
+  font-size: 2rem;
+  font-family: 'Anton', sans-serif;
+  width: 100%;
+}
+
+/* container */
+.container {
+  width: min(90vw, 1000px);
+  margin:auto;
+}
+
+/* form */
+form{
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  max-width: 500px;
+}
+
+.formHead{
+  background-color: whitesmoke;
+  border-bottom:black;
+  border-width: thin;
+  width: 100%;
+  height: 100%;
+  color: #121212;
+  border-radius: 0rem;
+
+}
+
+.card{
+  border:#007bff;
+  width: 100%;
+  margin: 0;
+}
+
+/* input */
+.input-group{
+  padding: 1rem;
+  background-color: whitesmoke;
+  text-align: center;
+  width: 100%;
+  border-radius: 0rem;
+  border-width: thin;
+  border-bottom: black;
+}
+
+.input-group input{
+  width:100%;
+  height: 35px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 00.25rem;
+  border: white;
+  border-width: 0rem;
+  float:right;
+}
+
+#data{
+  width: 180px;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.input-group.buttons{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.input-group.buttons #salvar{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 1rem;
+  height: 50px;
+  width: 80px;
+  text-align: center;
+  opacity: 0.7;
+  color:#fff;
+  background-color:#007bff;
+  border-color:#007bff;
+  border-radius: 00.25rem;
+  float: right;
+}
+
+.input-group.buttons #salvar:hover{
+  opacity: 1;
+}
+
+.input-group.buttons #close{
+  color: var(--red);
+  border: 2px var(--red) solid;
+  border-radius: 0.25rem;
+  
+  height: 50px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.input-group.buttons #close:hover{
+  opacity: 1;
+}
+
+html{
+  font-size: 93.75%;
+}
+
+/* tarefas */
+section.tarefas{
+  width: 100%;
+}
+
+body {
+  background: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+#cardBody{
+  border: none;
+  background-color: whitesmoke;
+}
+
+#list{
+  margin-top: 1rem;
+}
+
+li.initialMessage{
+  padding: 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+li.initialMessage:hover{
+  opacity: 1;
+}
+
+li.itemList{
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border:none;
+  opacity: 0.7;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  border: #d6d6d6;
+  border-width: 0.1px;
+  border-style: hidden;
+}
+
+li img{
+  float: right;
+  cursor: pointer;
+}
+
+li.itemList:hover{
+  opacity: 1;
+  background-color: #d6d6d6;
+}
+
+li {
+  list-style: none;
+}
+
+/* Abrir o menu de novas tarefas */
+#buttonNew{
+  width: 38%;
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+#newTask{
+  opacity: 0.7;
+}
+
+#newTask:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Alteração */
+#buttonTema{
+  color: black;
+  text-decoration: none;
+  float: right;
+  padding: 1rem 0rem 1rem 0rem;
+}
+#toggleTheme{
+  opacity: 0.7;
+}
+
+#toggleTheme:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Menu de novas tarefas */
+.modal-overlay{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 999;
+}
+
+.modal-overlay.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* span */
+.modal-span{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 999;
+}
+
+.modal-span.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.spanContainer{
+  padding: 1rem;
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 0.25rem;
+  border-width: 0.1px;
+  max-width: 700px;
+  height: 265px;
+  width: 396.45px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.spanContainer img.warning{
+  background-color: whitesmoke;
+  border-bottom:black;
+  border-width: thin;
+  width: 80px;
+  height: 80px;
+  color: black;
+  border-radius: 0rem;
+  margin-bottom: 2rem;
+  
+}
+
+.spanMessage{
+  font-size: 1.5rem;
+  height: 77.5px;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+span.span{
+  width: 100%;
+  height: 100%; 
+  margin-top: 2rem;
+}
+
+.spanClose a{
+  height: 50px;
+  width: 80px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  opacity: 0.7;
+  color:#fff;
+  background-color:#007bff;
+  border-color:#007bff;
+  border-radius: 00.25rem;
+  
+}
+
+.spanClose a:hover{
+  opacity: 1;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* rodapé */
+
+footer{
+  /* configuração do espaço */
+  margin-top: 15rem;
+  margin-bottom: 0px;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  background-color: whitesmoke;
+  /* configuração do tamanho */
+  height: 100%;
+  width: 100%;
+  position: relative;
+  
+  /* configuração de texto */
+  color: #000000; text-align: center; font-family: 'Anton', sans-serif;
+}
+
+.socialLink{
+  justify-content: center;
+  font-size: 12px;
+  color: #000000;
+}
+
+.socialLink:hover{
+  color: #007bff;
+  text-decoration: none;
+}
+.bar{
+  justify-content: center;
+  font-size: 12px;
+  color: #000000;
+}
+.about{
+  justify-content: center;
+  font-size: 12px;
+  color: #000000;
+}
+
+@media (min-width: 700px) and (max-width:450px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .input-group {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+  }
+}
