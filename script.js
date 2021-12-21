@@ -74,7 +74,7 @@ const Theme = {
     Theme.toggleButton.src ="./assets/toggle_off_black_24dp.svg"
     Theme.newTaskButton.src ="./assets/note_add_black_24dp.svg"
     Theme.logo.src ="./assets/task_black_24dp.svg"
-    Theme.imgWarning.src = "/assets/error_outline_black_24dp.svg"
+    Theme.imgWarning.src = "./assets/error_outline_black_24dp.svg"
     Theme.removeTaskButtonTheme()
     App.reload()
   },
