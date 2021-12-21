@@ -6,3 +6,4 @@
 - git add <files> ou '.' também serve para subir as modificações
 - git commit -m "descrição do commit"
 - git mv "nome atual" "novo nome" Serve para mover o arquivo ou simplesmente renomear o arquivo
+- mkdir serve para criar um diretório (uma pasta)
