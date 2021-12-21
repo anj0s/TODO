@@ -7,3 +7,8 @@
 - git commit -m "descrição do commit"
 - git mv "nome atual" "novo nome" Serve para mover o arquivo ou simplesmente renomear o arquivo
 - mkdir serve para criar um diretório (uma pasta)
+- git commit --amend -m "" isso altera o último commit
+- git revert HEAD~ número do commit
+- git diff mostra as diferenças ocorridas no arquivo
+- git show hash mostra as diferenças ocorridas naquele commit
+- git show hash --color-words mostra exatamente as palavras que foram alteradas
