@@ -37,6 +37,7 @@ const Tasks = {
     Tasks.all.splice(index, 1)
     // console.log(Tasks.all)
     // DOM.removeTask()
+    
     App.reload()
   },
 
