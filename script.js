@@ -203,6 +203,7 @@ const Input = {
 
 const App = {
   init(){
+    // Theme.alterTheme()
     Theme.removeTaskButtonTheme()
     Tasks.all.forEach(DOM.addTask)
     Tasks.VerifyArray()
@@ -212,6 +213,7 @@ const App = {
   },
 
   reload(){
+    // Theme.alterTheme()
     DOM.clearTasks()
     DOM.cardBody.innerHTML=''
     App.init()
