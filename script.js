@@ -18,8 +18,24 @@ const Modal = {
   }
 }
 
+const Storage = {
+  getTasks(){
+    return JSON.parse(localStorage.getItem("ToDoList:Tasks")) || []
+  },
+
+  getThemePreference(){
+    return JSON.parse(localStorage.getItem("ToDoList:ThemePreference")) || "style.css"
+  },
+  setTasks(value){
+    localStorage.setItem("ToDoList:Tasks",JSON.stringify(value))
+  },
+  setTheme(theme){
+    localStorage.setItem("ToDoList:ThemePreference",JSON.stringify(theme))
+  }
+}
+
 const Tasks = {
-  all: [],
+  all: Storage.getTasks(),
   
   add(value){
     Tasks.all.push(value)
@@ -55,7 +71,8 @@ const Theme = {
   imgWarning: document.querySelector('.warning'),
 
   darkTheme(){
-    Theme.theme.href = "darkStyle.css"
+    Storage.setTheme("darkStyle.css")
+    Theme.theme.href = Storage.getThemePreference()
     Theme.toggleButton.src = "./assets/toggle_on_white_24dp.svg"
     Theme.newTaskButton.src = "./assets/note_add_white_24dp.svg"
     Theme.logo.src = "./assets/task_white_24dp.svg"
@@ -65,7 +82,8 @@ const Theme = {
   },
 
   lightTheme(){
-    Theme.theme.href = "style.css"
+    Storage.setTheme("style.css")
+    Theme.theme.href = Storage.getThemePreference()
     Theme.toggleButton.src ="./assets/toggle_off_black_24dp.svg"
     Theme.newTaskButton.src ="./assets/note_add_black_24dp.svg"
     Theme.logo.src ="./assets/task_black_24dp.svg"
@@ -188,6 +206,9 @@ const App = {
     Theme.removeTaskButtonTheme()
     Tasks.all.forEach(DOM.addTask)
     Tasks.VerifyArray()
+
+    Storage.setTasks(Tasks.all)
+    Theme.theme.href = Storage.getThemePreference()
   },
 
   reload(){
