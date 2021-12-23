@@ -18,7 +18,6 @@ const Modal = {
   }
 }
 
-
 const Tasks = {
   all: [],
   
