@@ -103,13 +103,27 @@ const Theme = {
   
   alterTheme(){
     let href = Theme.theme.getAttribute("href")
-    
     if(href=="style.css"){
       return Theme.darkTheme()
     }else{
       return Theme.lightTheme()
     }
   },
+
+  initialTheme(){
+    let href = Theme.theme.getAttribute("href")
+    if(href=="style.css"){
+      Theme.toggleButton.src ="./assets/toggle_off_black_24dp.svg"
+      Theme.newTaskButton.src ="./assets/note_add_black_24dp.svg"
+      Theme.logo.src ="./assets/task_black_24dp.svg"
+      Theme.imgWarning.src = "./assets/error_outline_black_24dp.svg"
+    }else{
+      Theme.toggleButton.src = "./assets/toggle_on_white_24dp.svg"
+      Theme.newTaskButton.src = "./assets/note_add_white_24dp.svg"
+      Theme.logo.src = "./assets/task_white_24dp.svg"
+      Theme.imgWarning.src = "./assets/error_outline_white_24dp.svg"
+    }
+  }
 }
 
 const DOM = {
@@ -203,17 +217,15 @@ const Input = {
 
 const App = {
   init(){
-    // Theme.alterTheme()
-    Theme.removeTaskButtonTheme()
-    Tasks.all.forEach(DOM.addTask)
-    Tasks.VerifyArray()
-
     Storage.setTasks(Tasks.all)
     Theme.theme.href = Storage.getThemePreference()
+    Theme.removeTaskButtonTheme()
+    Theme.initialTheme()
+    Tasks.all.forEach(DOM.addTask)
+    Tasks.VerifyArray()
   },
 
   reload(){
-    // Theme.alterTheme()
     DOM.clearTasks()
     DOM.cardBody.innerHTML=''
     App.init()
